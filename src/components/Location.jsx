@@ -46,7 +46,7 @@ const Location = ({ boxSearch, setBoxSearch }) => {
             type="text"
             className='input-search'
             onClick={() => setBoxSearch(!boxSearch)}
-            onKeyDown={(e) => { e.key === 'Enter' && changeId() }}
+            onKeyDown={(e) => { e.key === 'Enter' && changeId(id) }}
             onChange={
               (e) => {
                 setId(e.target.value);
@@ -54,7 +54,7 @@ const Location = ({ boxSearch, setBoxSearch }) => {
               }
             }
             value={id}
-            placeholder='search for id or location' />
+            placeholder='search for id (1-126) or location' />
 
           <button
             onClick={changeId}
@@ -66,7 +66,7 @@ const Location = ({ boxSearch, setBoxSearch }) => {
           </button>
         </div>
 
-          {
+       {
             boxSearch && (
               <div className='box_result-search'>
                 {
@@ -77,7 +77,6 @@ const Location = ({ boxSearch, setBoxSearch }) => {
                         () => {
                           setId(loc.id);
                           setBoxSearch(false);
-                          changeId(id)
                         }}
                       key={loc.name}
                     >  "{loc.name}"
@@ -89,13 +88,9 @@ const Location = ({ boxSearch, setBoxSearch }) => {
             )
           }
 
-
-
-
-
-
-
       </section>
+
+     
 
       <section
         className='info-location'

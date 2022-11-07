@@ -19,12 +19,12 @@ const ResidentInfo = ({ urlResident }) => {
         <ul>
           <li 
             id='status-resident' 
-            style={{color: resident.status === 'Alive' ? 'white' : 'red'}} >
-            <span>{resident.status}</span>
-          </li>
-          <li>Specie: {resident.species}</li>
-          <li>Origin: {resident.origin?.name}</li>
-          <li>Where episodes appears: {resident.episode?.length}</li>
+            style={{color: resident.status === 'Alive' ? 'chartreuse' : 'red'}} >
+            <span><b>{resident.status}</b></span>
+          </li> 
+          <li><b>Specie:</b> {resident.species}</li>
+          <li><b>Origin:</b> {resident.origin?.name}</li>
+          <li><b>Where episodes appears:</b> {resident.episode?.length}</li>
         </ul>
 
       </div>
