@@ -78,7 +78,7 @@ body {
 
 @media (max-width: 480px) {
   .input-search {
-    width: 350px;
+    width: 300px;
   }
 }
 
@@ -127,7 +127,8 @@ body {
 
 @media (max-width: 480px) {
   .box_result-search {
-    width: 365px;
+    width: 310px;
+    z-index: 2;
   }
 }
 
@@ -140,6 +141,7 @@ body {
   padding: 5px 10px;
   color: rgb(54, 252, 253);
   background-color: rgba(0, 0, 0, 0);
+  z-index: 2;
 }
 
 
@@ -227,7 +229,7 @@ body {
 
   .card-resident {
     flex-direction: column;
-    width: 250px;
+    width: 300px;
     padding: 20px;
     height: fit-content;
 
