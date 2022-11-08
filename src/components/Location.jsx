@@ -8,6 +8,7 @@ const Location = ({ boxSearch, setBoxSearch }) => {
 
   const [location, setLocation] = useState([]);
 
+  const [search, setSearch] = useState([]);
 
   useEffect(() => {
     const random = Math.floor(Math.random() * 126)
@@ -34,7 +35,7 @@ const Location = ({ boxSearch, setBoxSearch }) => {
 
   }
 
-  const [search, setSearch] = useState([]);
+
 
   const filteredLocation = search.filter(loc => (loc.name.includes(id) || loc.id === Number(id)));
 
@@ -95,7 +96,6 @@ const Location = ({ boxSearch, setBoxSearch }) => {
 
       <section
         className='info-location'
-        onClick={() => setBoxSearch(false)}
       >
         <h1>Location </h1>
         <h2> {location.id} - "{location.name}" </h2>
@@ -123,7 +123,6 @@ const Location = ({ boxSearch, setBoxSearch }) => {
 
       <section
         className='container-residents'
-        onClick={() => setBoxSearch(false)}
       >
 
         {location.residents?.length === 0 && <h1>"There are no residents at this location"</h1>}
