@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import ResidentInfo from './ResidentInfo';
+import logo from '../images/logo.png'
 
 const Location = ({ boxSearch, setBoxSearch }) => {
 
@@ -90,7 +91,7 @@ const Location = ({ boxSearch, setBoxSearch }) => {
 
       </section>
 
-     
+      <img src={logo} alt="logo" className='logo' />
 
       <section
         className='info-location'
